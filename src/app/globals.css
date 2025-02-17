@@ -1,42 +1,104 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: "Amsterdam";
+}
+@font-face {
+  font-family: 'Amsterdam';
+  src: url('./fonts/NewAmsterdam-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.alert{
+  margin-bottom: 20px;
+}
+.timer-head{
+  padding-bottom:30px ;
+  text-align: center;
+}
+.count-down-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+  padding: 10px;
+}
+.count-inp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.count-inp input{
+  padding: 10px;
+  margin:  0 15px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  border: none;
+  outline: none;
+}
+#message{
+  margin: 30px 0;
+  width: 400px;
+  padding: 15px;
+  resize: none;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  border: none;
+  outline: none;
+}
+.count-down-form button{
+  padding: 15px;
+  background-color: black;
+  color: aquamarine;
+  cursor: pointer;
+}
+.count-down{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.count-down-end{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Responsiveness */
+@media only screen and (max-width:530px) {
+  #message{
+    width: 350px;
   }
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@media only screen and (max-width:508px) {
+  #date{
+    margin-top: 15px;
+  }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@media only screen and (max-width:400px) {
+  #message{
+    width: 300px;
+  }
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@media only screen and (max-width:345px) {
+  .count-inp input{
+    margin-top: 15px;
+  }
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media only screen and (max-width:324px) {
+  #message{
+    width: 250px;
   }
 }
