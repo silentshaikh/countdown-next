@@ -4,7 +4,7 @@ import { ChangeEvent, createContext, FormEvent, useContext, useState, useEffect 
 
 
 // Create context
-let CountDownContext = createContext<ContextProvider | null>(null);
+const CountDownContext = createContext<ContextProvider | null>(null);
 
 function Context({ children }: ContextChild) {
   const [timer, setTimer] = useState({ date: 0, mins: 0, sec: 0, hour: 0 });
